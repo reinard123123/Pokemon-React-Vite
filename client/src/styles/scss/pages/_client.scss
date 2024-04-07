@@ -1,0 +1,59 @@
+@import "../variables";
+
+.client {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 22rem 1fr;
+
+  .sidebar-client {
+    display: grid;
+    grid-template-rows: 20% 50%;
+    gap: 1rem;
+    background-color: #f8f8f8;
+    border: solid 1px #ccc;
+    padding: 2rem;
+    .logo-container {
+      border: solid 1px #ccc;
+      border-radius: 1rem;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .sidebar-links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .link-container {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        border-radius: 1rem;
+        border: solid 1px #ccc;
+        span {
+          display: flex;
+          align-items: center;
+        }
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+        &:hover {
+          background-color: #f03a0d;
+        }
+      }
+    }
+  }
+
+  & > *:nth-child(2) {
+    padding: 2rem;
+    background-color: #f0eded;
+  }
+}
